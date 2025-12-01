@@ -29,7 +29,7 @@
          *
          * &pro_micro <number> is the ZMK name for a nice!nano pin.
          * E.g., &pro_micro 21 is pin D0
-         * &pro_micro 8  is pin A0
+         * &pro_micro 8 is pin A0
          */
 
         // 6 Columns from your diagram (Col 0-5)
@@ -46,9 +46,9 @@
         row-gpios =
             <&pro_micro 3>,  /* Row Pin 0  -> MAPPED TO D6 (P1.04) */
             <&pro_micro 4>,  /* Row Pin 1  -> MAPPED TO D7 (P1.06) */
-            <&pro_micro 5>,  /* Row Pin 2  -> MAPPED TO D8 (P0.06)  !! USES DISPLAY PIN !! */
-            <&pro_micro 6>,  /* Row Pin 3  -> MAPPED TO D9 (P0.08)  !! USES DISPLAY PIN !! */
-            <&pro_micro 7>,  /* Row Pin 4  -> MAPPED TO D10 (P0.12) !! USES DISPLAY PIN !! */
+            <&pro_micro 5>,  /* Row Pin 2  -> MAPPED TO D8 (P0.06) */
+            <&pro_micro 6>,  /* Row Pin 3  -> MAPPED TO D9 (P0.08) */
+            <&pro_micro 7>,  /* Row Pin 4  -> MAPPED TO D10 (P0.12) */
             <&pro_micro 8>,  /* Row Pin 5  -> MAPPED TO A0 (P0.02) */
             <&pro_micro 9>,  /* Row Pin 6  -> MAPPED TO A1 (P0.03) (Connects to Phys. Row 7 & 16) */
             <&pro_micro 10>, /* Row Pin 7  -> MAPPED TO A2 (P0.28) (Connects to Phys. Row 8 & 17) */
@@ -61,19 +61,22 @@
             <&pro_micro 11>  /* Row Pin 14 -> MAPPED TO A9 (P0.13) */
             ;
     };
+
     matrix_transform: matrix_transform {
         compatible = "zmk,matrix-transform";
         rows = <17>;
         columns = <6>;
+
         map = <
             /* Override for Physical Row 15 */
             /* This row is electrically connected to Row Pin 6 */
             /* Note: Col 0 is empty on this row */
             RC(15,1) KC(6,1) RC(15,2) KC(6,2) RC(15,3) KC(6,3) RC(15,4) KC(6,4) RC(15,5) KC(6,5)
+
             /* Override for Physical Row 16 */
             /* This row is electrically connected to Row Pin 7 */
             /* Note: Cols 2-5 are empty on this row */
-            RC(16,0) KC(7,0) RC(16,1) KC(7,1) 
+            RC(16,0) KC(7,0) RC(16,1) KC(7,1)
         >;
     };
 };
