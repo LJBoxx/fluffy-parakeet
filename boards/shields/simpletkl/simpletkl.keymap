@@ -35,8 +35,6 @@
             &kp K120   &kp K121   &kp K122   &kp K123   &kp K124   &kp K125    // Row 12
             &kp K130   &kp K131   &kp K132   &kp K133   &kp K134   &kp K135    // Row 13
             &kp K140   &kp K141   &kp K142   &kp K143   &kp K144   &kp K145    // Row 14
-            &none      &kp K151   &kp K152   &kp K153   &kp K154   &kp K155    // Row 15 (Elec. Pin 6)
-            &kp K160   &kp K161   &none      &none      &none      &none       // Row 16 (Elec. Pin 7)
             >;
         };
     };
