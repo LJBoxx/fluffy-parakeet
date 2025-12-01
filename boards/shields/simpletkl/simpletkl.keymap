@@ -1,0 +1,43 @@
+/*
+ * Keymap for: simpletkl
+ *
+ * This keymap MUST match your PHYSICAL layout (17 rows, 6 columns).
+ * Use &none for any empty spots in the matrix.
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/matrix_transform.h> // Required for matrix_transform
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            // 17 rows, 6 columns
+            // Fill this in with your desired keys (e.g., &kp Q, &kp A, etc.)
+            // I have pre-filled &none for the empty spots from your diagram.
+            //
+            //      Col 0      Col 1      Col 2      Col 3      Col 4      Col 5
+            bindings = <
+            &kp K00    &kp K01    &kp K02    &kp K03    &kp K04    &kp K05     // Row 0
+            &kp K10    &kp K11    &kp K12    &kp K13    &kp K14    &kp K15     // Row 1
+            &kp K20    &kp K21    &kp K22    &kp K23    &kp K24    &kp K25     // Row 2
+            &kp K30    &kp K31    &kp K32    &kp K33    &kp K34    &none       // Row 3 (Col 5 empty)
+            &kp K40    &kp K41    &kp K42    &kp K43    &kp K44    &none       // Row 4 (Col 5 empty)
+            &kp K50    &kp K51    &kp K52    &kp K53    &kp K54    &kp K55     // Row 5
+            &kp K60    &kp K61    &kp K62    &kp K63    &kp K64    &kp K65     // Row 6 (Elec. Pin 6)
+            &kp K70    &kp K71    &kp K72    &kp K73    &kp K74    &kp K75     // Row 7 (Elec. Pin 7)
+            &kp K80    &kp K81    &kp K82    &kp K83    &kp K84    &kp K85     // Row 8
+            &kp K90    &kp K91    &kp K92    &kp K93    &kp K94    &kp K95     // Row 9
+            &kp K100   &kp K101   &kp K102   &kp K103   &kp K104   &kp K105    // Row 10
+            &kp K110   &kp K111   &kp K112   &kp K113   &kp K114   &kp K115    // Row 11
+            &kp K120   &kp K121   &kp K122   &kp K123   &kp K124   &kp K125    // Row 12
+            &kp K130   &kp K131   &kp K132   &kp K133   &kp K134   &kp K135    // Row 13
+            &kp K140   &kp K141   &kp K142   &kp K143   &kp K144   &kp K145    // Row 14
+            &none      &kp K151   &kp K152   &kp K153   &kp K154   &kp K155    // Row 15 (Elec. Pin 6)
+            &kp K160   &kp K161   &none      &none      &none      &none       // Row 16 (Elec. Pin 7)
+            >;
+        };
+    };
+};
