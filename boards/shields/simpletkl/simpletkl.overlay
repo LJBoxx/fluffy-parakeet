@@ -48,7 +48,7 @@
 
     default_transform: matrix_transform {
          compatible = "zmk,matrix-transform";
-         rows = <17>;
+         rows = <15>;
          columns = <6>;
          /* this is what i get for being lazy xD */
          map = <
