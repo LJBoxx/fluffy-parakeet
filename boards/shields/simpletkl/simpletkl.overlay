@@ -46,25 +46,21 @@
             ;
     };
 
-    matrix_transform: matrix_transform {
-        compatible = "zmk,matrix-transform";
-        rows = <17>;
-        columns = <6>;
-        map = <
-            /* Override for Physical Row 15 */
-            /* This row is electrically connected to Row Pin 6 */
-            /* Note: Col 0 is empty on this row */
-            RC(15,1) KC(6,1),
-            RC(15,2) KC(6,2),
-            RC(15,3) KC(6,3),
-            RC(15,4) KC(6,4),
-            RC(15,5) KC(6,5),
+     matrix_transform: matrix_transform {
+         compatible = "zmk,matrix-transform";
+         rows = <17>;
+         columns = <6>;
+         map = <
+             /* Override for Physical Row 15
+                This physical row is electrically connected to Row Pin 6 (electrical row 6).
+                The map entries list the physical matrix coordinates that fill the logical positions;
+                for the logical keys that correspond to physical row 15, point them to RC(6, col). */
+             RC(6,1) RC(6,2) RC(6,3) RC(6,4) RC(6,5)
 
-            /* Override for Physical Row 16 */
-            /* This row is electrically connected to Row Pin 7 */
-            /* Note: Cols 2-5 are empty on this row */
-            RC(16,0) KC(7,0),
-            RC(16,1) KC(7,1)
-        >;
-    };
-};
+             /* Override for Physical Row 16
+                This physical row is electrically connected to Row Pin 7 (electrical row 7).
+                Only columns 0 and 1 are present on this physical row per your comments. */
+             RC(7,0) RC(7,1)
+         >;
+     };
+ };
