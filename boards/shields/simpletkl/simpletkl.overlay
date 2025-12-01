@@ -1,5 +1,5 @@
 /*
- * Shield Overlay for: my_keyboard
+ * Shield Overlay for: simpletkl
  *
  * This file defines the matrix hardware based on your diagram.
  * It sets up the 15 electrical rows, 6 columns, and
@@ -70,11 +70,10 @@
             /* This row is electrically connected to Row Pin 6 */
             /* Note: Col 0 is empty on this row */
             RC(15,1) KC(6,1) RC(15,2) KC(6,2) RC(15,3) KC(6,3) RC(15,4) KC(6,4) RC(15,5) KC(6,5)
-
             /* Override for Physical Row 16 */
             /* This row is electrically connected to Row Pin 7 */
             /* Note: Cols 2-5 are empty on this row */
-            RC(16,0) KC(7,0) RC(16,1) KC(7,1)
+            RC(16,0) KC(7,0) RC(16,1) KC(7,1) 
         >;
     };
 };
