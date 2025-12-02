@@ -19,30 +19,30 @@
         label = "KSCAN";
 
         col-gpios =
-            <&pro_micro 21>, /* Col 0 -> MAPPED TO D0 (P1.11) */
-            <&pro_micro 20>, /* Col 1 -> MAPPED TO D1 (P1.10) */
-            <&pro_micro 19>, /* Col 2 -> MAPPED TO D2 (P1.00) */
-            <&pro_micro 18>, /* Col 3 -> MAPPED TO D3 (P0.10) */
-            <&pro_micro 1>,  /* Col 4 -> MAPPED TO D4 (P0.09) */
-            <&pro_micro 2>   /* Col 5 -> MAPPED TO D5 (P1.02) */
+            <&gpio1 11 0>,
+            <&gpio1 10 0>,
+            <&gpio1 0 0>,
+            <&gpio0 10 0>,
+            <&gpio0 9 0>,
+            <&gpio1 2 0>
             ;
 
         row-gpios =
-            <&pro_micro 3>,  /* Row Pin 0  -> MAPPED TO D6 (P1.04) */
-            <&pro_micro 4>,  /* Row Pin 1  -> MAPPED TO D7 (P1.06) */
-            <&pro_micro 5>,  /* Row Pin 2  -> MAPPED TO D8 (P0.06) */
-            <&pro_micro 6>,  /* Row Pin 3  -> MAPPED TO D9 (P0.08) */
-            <&pro_micro 7>,  /* Row Pin 4  -> MAPPED TO D10 (P0.12) */
-            <&pro_micro 8>,  /* Row Pin 5  -> MAPPED TO A0 (P0.02) */
-            <&pro_micro 9>,  /* Row Pin 6  -> MAPPED TO A1 (P0.03) (Connects to Phys. Row 6 & 15) */
-            <&pro_micro 10>, /* Row Pin 7  -> MAPPED TO A2 (P0.28) (Connects to Phys. Row 7 & 16) */
-            <&pro_micro 17>, /* Row Pin 8  -> MAPPED TO A3 (P0.29) */
-            <&pro_micro 16>, /* Row Pin 9  -> MAPPED TO A4 (P0.04) */
-            <&pro_micro 15>, /* Row Pin 10 -> MAPPED TO A5 (P0.05) */
-            <&pro_micro 14>, /* Row Pin 11 -> MAPPED TO A6 (P0.30) */
-            <&pro_micro 13>, /* Row Pin 12 -> MAPPED TO A7 (P0.31) */
-            <&pro_micro 12>, /* Row Pin 13 -> MAPPED TO A8 (P0.11) */
-            <&pro_micro 11>  /* Row Pin 14 -> MAPPED TO A9 (P0.13) */
+            <&gpio1 4 0>,
+            <&gpio1 6 0>,
+            <&gpio0 6 0>,
+            <&gpio0 8 0>,
+            <&gpio0 12 0>,
+            <&gpio0 2 0>,
+            <&gpio0 3 0>,
+            <&gpio0 28 0>,
+            <&gpio0 29 0>,
+            <&gpio0 4 0>,
+            <&gpio0 5 0>,
+            <&gpio0 30 0>,
+            <&gpio0 31 0>,
+            <&gpio0 11 0>,
+            <&gpio0 13 0>
             ;
     };
 
