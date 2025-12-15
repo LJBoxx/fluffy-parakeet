@@ -20,12 +20,12 @@ kscan0: kscan {
     diode-direction = "col2row";
 
     row-gpios =
-        <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN),   /* C0 -> P0.02 */
-        <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN),  /* C1 -> P1.11 */
-        <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN),  /* C2 -> P1.13 */
-        <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN),  /* C3 -> P1.15 */
-        <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN),  /* C4 -> P0.29 */
-        <&gpio0 31 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)   /* C5 -> P0.31 */
+        <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,   /* C0 -> P0.02 */
+        <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,  /* C1 -> P1.11 */
+        <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,  /* C2 -> P1.13 */
+        <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,  /* C3 -> P1.15 */
+        <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,  /* C4 -> P0.29 */
+        <&gpio0 31 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* C5 -> P0.31 */
         ;
 
     col-gpios =
