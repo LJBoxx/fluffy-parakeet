@@ -14,38 +14,38 @@
         zmk,matrix_transform = &default_transform;
     };
 
-    kscan0: kscan {
-        compatible = "zmk,kscan-gpio-matrix";
-        label = "KSCAN";
-        diode-direction = "col2row";
+kscan0: kscan {
+    compatible = "zmk,kscan-gpio-matrix";
+    label = "KSCAN";
+    diode-direction = "col2row";
 
-        col-gpios =
-            <&gpio1 11 0>,
-            <&gpio1 10 0>,
-            <&gpio1 0 0>,
-            <&gpio0 10 0>,
-            <&gpio0 9 0>,
-            <&gpio1 2 0>
-            ;
+    col-gpios =
+        <&gpio0 2 0>,   /* C0 -> P0.02 */
+        <&gpio1 11 0>,  /* C1 -> P1.11 */
+        <&gpio1 13 0>,  /* C2 -> P1.13 */
+        <&gpio1 15 0>,  /* C3 -> P1.15 */
+        <&gpio0 29 0>,  /* C4 -> P0.29 */
+        <&gpio0 31 0>   /* C5 -> P0.31 */
+        ;
 
-        row-gpios =
-            <&gpio1 4 0>,
-            <&gpio1 6 0>,
-            <&gpio0 6 0>,
-            <&gpio0 8 0>,
-            <&gpio0 12 0>,
-            <&gpio0 2 0>,
-            <&gpio0 3 0>,
-            <&gpio0 28 0>,
-            <&gpio0 29 0>,
-            <&gpio0 4 0>,
-            <&gpio0 5 0>,
-            <&gpio0 30 0>,
-            <&gpio0 31 0>,
-            <&gpio0 11 0>,
-            <&gpio0 13 0>
-            ;
-    };
+    row-gpios =
+        <&gpio1 7 0>,   /* R0  -> P1.07 */
+        <&gpio1 1 0>,   /* R1  -> P1.01 */
+        <&gpio1 2 0>,   /* R2  -> P1.02 */
+        <&gpio0 11 0>,  /* R3  -> P0.11 */
+        <&gpio1 0 0>,   /* R4  -> P1.00 */
+        <&gpio1 4 0>,   /* R5  -> P1.04 */
+        <&gpio0 24 0>,  /* R6  -> P0.24 */
+        <&gpio0 22 0>,  /* R7  -> P0.22 */
+        <&gpio0 8 0>,   /* R8  -> P0.08 */
+        <&gpio0 20 0>,  /* R9  -> P0.20 */
+        <&gpio0 6 0>,   /* R10 -> P0.06 */
+        <&gpio0 17 0>,  /* R11 -> P0.17 */
+        <&gpio1 6 0>,   /* R12 -> P1.06 */
+        <&gpio0 10 0>,  /* R13 -> P0.10 */
+        <&gpio0 9 0>    /* R14 -> P0.09 */
+        ;
+};
 
     default_transform: matrix_transform {
          compatible = "zmk,matrix-transform";
