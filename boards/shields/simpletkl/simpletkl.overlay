@@ -17,7 +17,7 @@
 kscan0: kscan {
     compatible = "zmk,kscan-gpio-matrix";
     label = "KSCAN";
-    diode-direction = "row2col";
+    diode-direction = "col2row";
 
     col-gpios =
         <&gpio0 2 0>,   /* C0 -> P0.02 */
@@ -29,21 +29,21 @@ kscan0: kscan {
         ;
 
     row-gpios =
-        <&gpio1 7 0>,   /* R0  -> P1.07 */
-        <&gpio1 1 0>,   /* R1  -> P1.01 */
-        <&gpio1 2 0>,   /* R2  -> P1.02 */
-        <&gpio0 11 0>,  /* R3  -> P0.11 */
-        <&gpio1 0 0>,   /* R4  -> P1.00 */
-        <&gpio1 4 0>,   /* R5  -> P1.04 */
-        <&gpio0 24 0>,  /* R6  -> P0.24 */
-        <&gpio0 22 0>,  /* R7  -> P0.22 */
-        <&gpio0 8 0>,   /* R8  -> P0.08 */
-        <&gpio0 20 0>,  /* R9  -> P0.20 */
-        <&gpio0 6 0>,   /* R10 -> P0.06 */
-        <&gpio0 17 0>,  /* R11 -> P0.17 */
-        <&gpio1 6 0>,   /* R12 -> P1.06 */
-        <&gpio0 10 0>,  /* R13 -> P0.10 */
-        <&gpio0 9 0>    /* R14 -> P0.09 */
+        <&gpio1 7 GPIO_PULL_DOWN>,   /* R0  -> P1.07 */
+        <&gpio1 1 GPIO_PULL_DOWN>,   /* R1  -> P1.01 */
+        <&gpio1 2 GPIO_PULL_DOWN>,   /* R2  -> P1.02 */
+        <&gpio0 11 GPIO_PULL_DOWN,  /* R3  -> P0.11 */
+        <&gpio1 0 GPIO_PULL_DOWN,   /* R4  -> P1.00 */
+        <&gpio1 4 GPIO_PULL_DOWN,   /* R5  -> P1.04 */
+        <&gpio0 24 GPIO_PULL_DOWN,  /* R6  -> P0.24 */
+        <&gpio0 22 GPIO_PULL_DOWN,  /* R7  -> P0.22 */
+        <&gpio0 8 GPIO_PULL_DOWN,   /* R8  -> P0.08 */
+        <&gpio0 20 GPIO_PULL_DOWN,  /* R9  -> P0.20 */
+        <&gpio0 6 GPIO_PULL_DOWN,   /* R10 -> P0.06 */
+        <&gpio0 17 GPIO_PULL_DOWN,  /* R11 -> P0.17 */
+        <&gpio1 6 GPIO_PULL_DOWN,   /* R12 -> P1.06 */
+        <&gpio0 10 GPIO_PULL_DOWN,  /* R13 -> P0.10 */
+        <&gpio0 9 GPIO_PULL_DOWN    /* R14 -> P0.09 */
         ;
 };
 
