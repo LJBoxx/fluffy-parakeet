@@ -31,7 +31,7 @@ kscan0: kscan {
     col-gpios =
         <&gpio1 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>,   /* R0  -> P1.07 */
         <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>,   /* R1  -> P1.01 */
-        <&gpio0 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>,   /* R2  -> P1.02 moved to dio coz dead*/
+        <&gpio0 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>,   /* R2  -> P0.15 moved to dio coz dead*/
         <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>,  /* R3  -> P0.11 */
         <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>,   /* R4  -> P1.00 */
         <&gpio1 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>,   /* R5  -> P1.04 */
@@ -63,10 +63,7 @@ RC(5,0) RC(5,1) RC(5,2)                 RC(5,5)                 RC(5,8) RC(5,9) 
      };
  };
 
-&uart0 {
+&led0 {
     status = "disabled";
 };
 
-&uart1 {
-    status = "disabled";
-};
