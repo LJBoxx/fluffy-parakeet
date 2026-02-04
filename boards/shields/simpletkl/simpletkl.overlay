@@ -63,7 +63,7 @@ RC(5,0) RC(5,1) RC(5,2)                 RC(5,5)                 RC(5,8) RC(5,9) 
      };
  };
 
-&led0 {
+leds {
     status = "disabled";
 };
 
