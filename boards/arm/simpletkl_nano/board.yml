@@ -1,11 +1,19 @@
 board:
   name: simpletkl_nano
   vendor: nicekeyboards
-  socs:
-    - name: nrf52840
+  identifier: simpletkl_nano
+  vendor: nicekeyboards
+  type: mcu
+  arch: arm
+  toolchain: zephyr
+  soc: nrf52840
+  ram: 256
+  flash: 1024
   revision:
     format: major.minor.patch
     default: 2.0.0
     revisions:
       - name: 1.0.0
       - name: 2.0.0
+  arch:
+    - 
